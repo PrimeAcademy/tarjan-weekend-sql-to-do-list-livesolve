@@ -76,8 +76,18 @@ app.put('/tasks/:id', (req, res) => {
 });
 
 //const port = 3000;
-const port = process.env.PORT;
-console.log(`Heroku wants us to listen on port`, port);
+// let port;
+// if (process.env.PORT === undefined) {
+//   port = 3000;
+// }
+// else {
+//   port = process.env.PORT;
+// }
+
+// Use PORT env var, or 3000 by default
+const port = process.env.PORT || 3000;
+
+console.log(`We're going to listen on port`, port);
 app.listen(port, () => {
   console.log(`Listening on ${port}`);
 })
