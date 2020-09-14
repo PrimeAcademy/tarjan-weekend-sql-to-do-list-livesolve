@@ -1,6 +1,7 @@
 TODO
 
 - [ ] List/Render existing tasks
+  - [x] GET /tasks endpoint
 - [ ] User can create a task
   - [ ] New task saved to DB
   - [ ] Refresh / GET tasks after creating a new one
