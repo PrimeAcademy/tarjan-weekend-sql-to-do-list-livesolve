@@ -6,7 +6,7 @@ TODO
   - [x] client side form
   - [x] New task saved to DB
   - [x] Refresh / GET tasks after creating a new one
-- [ ] Complete button
+- [x] Complete button
   - [x] Render current `isComplete` status
     - [x] On complete, style differently
     - [x] On Complete, should be "checked off"

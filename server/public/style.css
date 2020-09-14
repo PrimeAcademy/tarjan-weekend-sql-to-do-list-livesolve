@@ -2,6 +2,25 @@ body {
   background: peachpuff;
 }
 
+h4 {
+  margin: 15px 0 5px 0;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+ul {
+  padding: 0;
+  margin-top: 22px;
+}
+li {
+  list-style: none;
+  clear: both;
+  margin-bottom: 8px;
+}
+
 li.complete {
   text-decoration: line-through;
   color: #9a9a9a;
@@ -9,6 +28,7 @@ li.complete {
 
 li button {
   display: none;
+  float: right;
 }
 
 li.complete button {

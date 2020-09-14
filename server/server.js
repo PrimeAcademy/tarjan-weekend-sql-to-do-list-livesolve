@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
   ]
  */
 app.get('/tasks', (req, res) => {
-  let queryString = `SELECT * FROM "tasks";`
+  let queryString = `SELECT * FROM "tasks" ORDER BY "id" ASC;`
   pool.query(queryString)
     .then((results) => {
       res.send(results.rows);
