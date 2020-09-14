@@ -8,8 +8,8 @@ TODO
   - [x] Refresh / GET tasks after creating a new one
 - [ ] Complete button
   - [x] Render current `isComplete` status
-    - [ ] On complete, style differently
-    - [ ] On Complete, should be "checked off"
+    - [x] On complete, style differently
+    - [x] On Complete, should be "checked off"
   - [ ] Handle status changes
     - [ ] Store completion in DB
 - [ ] Delete button
@@ -58,7 +58,7 @@ POST /tasks
 
 PUT /tasks/:id
 {
-  isCompleted: true
+  isComplete: true
 }
 --> 200
 

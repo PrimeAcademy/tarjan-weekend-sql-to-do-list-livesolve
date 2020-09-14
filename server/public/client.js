@@ -8,6 +8,9 @@ function onReady() {
 
   // Click event listener for new button
   $(document).on('click', '#newTaskBtn', createTask);
+
+  // Handle completed/incompleted checkbox
+  $(document).on('click', '.completeTaskBtn', toggleTaskCompleted)
 }
 
 /**
@@ -38,8 +41,8 @@ function renderTasks() {
       }
 
       $('#todoList').append(`
-        <li class="${className}">
-          <input type="checkbox" ${checkedAttr}/>
+        <li class="${className}" data-id="${task.id}">
+          <input class="completeTaskBtn" type="checkbox" ${checkedAttr}/>
           ${task.name}
           <button>Delete</button>
         </li>
@@ -74,4 +77,34 @@ function createTask() {
   }).catch(err => {
     console.error("POST /tasks failed", err);
   })
+}
+
+/**
+ * Make task as completed/incomplete
+ * based on the checkbox input
+ * 
+ * PUT /tasks/:id
+    {
+      isComplete: true
+    }
+ */
+function toggleTaskCompleted() {
+  let isComplete = $(this).is(':checked');
+  console.log('isComplete?', isComplete);
+
+  // Grab ID from DOM
+  let taskId = $(this).parent().data('id');
+  console.log('taskId', taskId);
+
+  $.ajax({
+    method: "PUT",
+    url: `/tasks/${taskId}`,
+    data: {
+      isComplete: isComplete,
+    }
+  }).then(response => {
+    console.log("PUT /tasks succeeded");
+  }).catch(err => {
+    console.error("PUT /tasks failed", err);
+  });
 }
