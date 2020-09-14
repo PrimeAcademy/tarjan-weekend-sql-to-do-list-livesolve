@@ -10,7 +10,7 @@ In building this app, I practiced skills for full stack integration, connecting 
 
 ## Screenshots
 
-![screenshot](./app-screenshot.png)
+![demo](./todo-app.gif)
 
 
 ## Prerequisites
