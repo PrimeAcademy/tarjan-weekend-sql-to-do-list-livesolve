@@ -1,8 +1,9 @@
 TODO
 
-- [ ] List/Render existing tasks
+- [x] List/Render existing tasks
   - [x] GET /tasks endpoint
 - [ ] User can create a task
+  - [x] client side form
   - [ ] New task saved to DB
   - [ ] Refresh / GET tasks after creating a new one
 - [ ] Complete button
@@ -13,7 +14,7 @@ TODO
   - [ ] Remove from front-end and DB
 
 - [x] Create a DB called `weekend-to-do-app`
-  - [ ] Configure DB in node server
+  - [x] Configure DB in node server
   - [x] Include `database.sql` file
   - [x] Include CREATE TABLE query
 

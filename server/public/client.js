@@ -5,6 +5,9 @@ function onReady() {
 
   // Render tasks on page load
   renderTasks();
+
+  // Click event listener for new button
+  $(document).on('click', '#newTaskBtn', createTask);
 }
 
 /**
@@ -31,4 +34,28 @@ function renderTasks() {
   }).catch(err => {
     console.error("GET /tasks failed", err);
   });
+}
+
+/**
+ * Create a new task from form inputs
+ * Will do POST /tasks with
+ * {
+ *   name: "name from input element"
+ * }
+ */
+function createTask() {
+  let newTaskName = $('#newTaskName').val();
+  console.log("Creating new task: ", newTaskName);
+
+  $.ajax({
+    method: "POST",
+    url: "/tasks",
+    data: {
+      name: newTaskName
+    }
+  }).then(response => {
+    console.log("POST /tasks complete");
+  }).catch(err => {
+    console.error("POST /tasks failed", err);
+  })
 }
