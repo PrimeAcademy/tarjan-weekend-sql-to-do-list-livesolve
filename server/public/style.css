@@ -1,0 +1,16 @@
+body {
+  background: peachpuff;
+}
+
+li.complete {
+  text-decoration: line-through;
+  color: #9a9a9a;
+}
+
+li button {
+  display: none;
+}
+
+li.complete button {
+  display: inline-block;
+}

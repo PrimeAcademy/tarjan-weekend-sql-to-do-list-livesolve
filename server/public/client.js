@@ -24,9 +24,22 @@ function renderTasks() {
     // Look through each todo item
     $('#todoList').empty();
     for (let task of response) {
+      let checkedAttr;
+      let className;
+      if (task.isComplete) {
+        // show checked attribute
+        checkedAttr = 'checked';
+        className = "complete";
+      }
+      else {
+        // don't show checked attribute
+        checkedAttr = ''
+        className = '';
+      }
+
       $('#todoList').append(`
-        <li>
-          <input type="checkbox" />
+        <li class="${className}">
+          <input type="checkbox" ${checkedAttr}/>
           ${task.name}
           <button>Delete</button>
         </li>
