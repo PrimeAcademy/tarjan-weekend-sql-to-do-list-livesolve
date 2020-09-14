@@ -22,6 +22,7 @@ function renderTasks() {
     console.log("Got a response from GET /tasks", response);
 
     // Look through each todo item
+    $('#todoList').empty();
     for (let task of response) {
       $('#todoList').append(`
         <li>
@@ -55,6 +56,8 @@ function createTask() {
     }
   }).then(response => {
     console.log("POST /tasks complete");
+
+    renderTasks();
   }).catch(err => {
     console.error("POST /tasks failed", err);
   })

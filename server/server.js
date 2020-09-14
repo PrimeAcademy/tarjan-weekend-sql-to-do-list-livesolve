@@ -32,6 +32,25 @@ app.get('/tasks', (req, res) => {
       console.error("GET request failed", err);
       res.sendStatus(500);
     })
+});
+
+app.post('/tasks', (req, res) => {
+  console.log("POST /tasks req.body:", req.body);
+  let taskName = req.body.name;
+  console.log("task name is", taskName);
+
+  let queryString = `
+    INSERT INTO "tasks" ("name") 
+    VALUES ($1);
+  `;
+  pool.query(queryString, [taskName])
+    .then((results) => {
+      res.sendStatus(201)
+    })
+    .catch((err) => {
+      console.error("POST request failed", err);
+      res.sendStatus(500);
+    });
 })
 
 const port = 3000;
