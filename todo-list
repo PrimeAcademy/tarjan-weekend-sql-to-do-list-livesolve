@@ -64,3 +64,11 @@ PUT /tasks/:id
 
 DELETE /tasks/:id
 --> 200
+
+
+Docs
+--- 
+
+- What is it?
+- How to run it?
+- How to use it?
