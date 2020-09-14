@@ -8,6 +8,10 @@ This is a basic ToDo list, where a user make a checklist of things to do, and ma
 
 In building this app, I practiced skills for full stack integration, connecting a jQuery-powered front-end through a node server to a SQL database.
 
+## Screenshots
+
+![screenshot](./app-screenshot.png)
+
 
 ## Prerequisites
 
