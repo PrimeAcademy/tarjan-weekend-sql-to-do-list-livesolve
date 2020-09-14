@@ -38,3 +38,25 @@ let listOfTasks = [
     isCompleted: true     // BOOLEAN
   }
 ]
+
+----
+
+Documentation Driven Development
+
+GET /tasks
+--> array of task objects
+
+POST /tasks
+{
+  name: "Wash the dishes",
+}
+--> 201
+
+PUT /tasks/:id
+{
+  isCompleted: true
+}
+--> 200
+
+DELETE /tasks/:id
+--> 200
