@@ -35,3 +35,7 @@ To run this application:
 Write a todo item in the text box and click _Create!!_ to add a new item.
 Click the checkbox next to the item to mark as complete.
 Click the delete button to remove a task.
+
+## Deploying to Heroku
+
+See [HEROKU.md](./HEROKU.md).
