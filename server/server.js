@@ -75,7 +75,9 @@ app.put('/tasks/:id', (req, res) => {
     });
 });
 
-const port = 3000;
+//const port = 3000;
+const port = process.env.PORT;
+console.log(`Heroku wants us to listen on port`, port);
 app.listen(port, () => {
   console.log(`Listening on ${port}`);
 })
