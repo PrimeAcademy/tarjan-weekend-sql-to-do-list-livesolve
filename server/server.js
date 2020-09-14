@@ -51,7 +51,31 @@ app.post('/tasks', (req, res) => {
       console.error("POST request failed", err);
       res.sendStatus(500);
     });
-})
+});
+
+app.put('/tasks/:id', (req, res) => {
+  // Grab task ID from URL
+  let taskId = req.params.id;
+  // Grab isComplete value from body
+  let isComplete = req.body.isComplete;
+
+  console.log(`Setting ${taskId} to ${isComplete}`);
+
+  // Update task in DB
+  let queryString = `
+    UPDATE "tasks" 
+    SET "isComplete" = $1
+    WHERE "id" = $2;
+  `;
+  pool.query(queryString, [isComplete, taskId])
+    .then((results) => {
+      res.sendStatus(200)
+    })
+    .catch((err) => {
+      console.error("PUT request failed", err);
+      res.sendStatus(500);
+    });
+});
 
 const port = 3000;
 app.listen(port, () => {

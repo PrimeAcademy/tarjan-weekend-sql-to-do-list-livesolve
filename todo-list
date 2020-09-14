@@ -10,8 +10,8 @@ TODO
   - [x] Render current `isComplete` status
     - [x] On complete, style differently
     - [x] On Complete, should be "checked off"
-  - [ ] Handle status changes
-    - [ ] Store completion in DB
+  - [x] Handle status changes
+    - [x] Store completion in DB
 - [ ] Delete button
   - [ ] Remove from front-end and DB
 

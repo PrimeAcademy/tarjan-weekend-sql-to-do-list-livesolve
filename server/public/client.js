@@ -104,6 +104,7 @@ function toggleTaskCompleted() {
     }
   }).then(response => {
     console.log("PUT /tasks succeeded");
+    renderTasks();
   }).catch(err => {
     console.error("PUT /tasks failed", err);
   });
