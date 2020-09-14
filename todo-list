@@ -1,0 +1,40 @@
+TODO
+
+- [ ] List/Render existing tasks
+- [ ] User can create a task
+  - [ ] New task saved to DB
+  - [ ] Refresh / GET tasks after creating a new one
+- [ ] Complete button
+  - [ ] On complete, style differently
+  - [ ] On Complete, should be "checked off"
+  - [ ] Store completion in DB
+- [ ] Delete button
+  - [ ] Remove from front-end and DB
+
+- [x] Create a DB called `weekend-to-do-app`
+  - [ ] Configure DB in node server
+  - [x] Include `database.sql` file
+  - [x] Include CREATE TABLE query
+
+- [ ] Styling
+  - [ ] Background color
+  - [ ] font family and size
+  - [ ] new color for completed tasks
+
+
+
+
+**STRETCH GOALS**
+Later....
+
+
+-----
+
+Data structure
+
+let listOfTasks = [
+  {
+    name: 'Mow the lawn', // string or VARCHAR
+    isCompleted: true     // BOOLEAN
+  }
+]
