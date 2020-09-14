@@ -3,22 +3,23 @@ body {
 }
 
 h4 {
-  margin: 15px 0 5px 0;
+  margin: 35px 0 10px 0;
 }
 
 .container {
-  width: 400px;
+  width: 500px;
   margin: 0 auto;
+  font-size: 1.2em;
 }
 
 ul {
   padding: 0;
-  margin-top: 22px;
+  margin-top: 35px;
 }
 li {
   list-style: none;
   clear: both;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 
 li.complete {
@@ -26,11 +27,22 @@ li.complete {
   color: #9a9a9a;
 }
 
-li button {
+li button.btn {
   display: none;
   float: right;
+  font-size: 14px;
+  padding: 4px 8px;
+  margin-top: -1px;
 }
 
 li.complete button {
   display: inline-block;
+}
+
+input[type=text] {
+  display: inline-block;
+  width: 270px;
+}
+#newTaskBtn {
+  float: right;
 }

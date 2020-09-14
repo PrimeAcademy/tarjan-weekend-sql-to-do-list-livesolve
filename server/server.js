@@ -1,8 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const pool = require('./pool');
-const { query } = require('express');
-
 const app = express();
 
 // Serve static files from server/public folder

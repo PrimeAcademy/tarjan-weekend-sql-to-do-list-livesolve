@@ -44,7 +44,7 @@ function renderTasks() {
         <li class="${className}" data-id="${task.id}">
           <input class="completeTaskBtn" type="checkbox" ${checkedAttr}/>
           ${task.name}
-          <button>Delete</button>
+          <button class="btn btn-danger">Delete</button>
         </li>
       `)
     }
